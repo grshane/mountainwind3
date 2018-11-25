@@ -1,0 +1,17 @@
+backend:
+  name: github
+  branch: master
+  repo: grshane/mountainwind3
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: "services"
+    label: "Services"
+    folder: "src/team"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: 'Service', name: 'title', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'markdown' }

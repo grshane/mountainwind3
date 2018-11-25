@@ -1,0 +1,5 @@
+---
+slug: "/new-post"
+---
+
+# NEWS!
