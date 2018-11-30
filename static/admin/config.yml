@@ -11,7 +11,25 @@ collections:
     label: "Services"
     folder: "src/team"
     create: true
-    slug: "{{slug}}"
+    slug: "services/{{slug}}"
     fields:
       - { label: 'Service', name: 'title', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'markdown' }
+  - name: "pages"
+    label: "Pages"
+    folder: "src/pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: 'Page Title', name: 'title', widget: 'string' }
+      - { label: 'Content', name: 'content', widget: 'markdown'}
+  - name: "films"
+    label: "Films"
+    folder: "src/films"
+    create: true
+    slug: "films/{{slug}}"
+    fields:
+      - { label: 'Film Title', name: 'title', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'markdown'}
+      - { label: 'Poster Image', name: 'poster_img', widget: 'image'}
+
