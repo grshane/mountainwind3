@@ -1,5 +1,5 @@
 ---
-slug: "first-seal"
+slug: "/first-seal"
 ---
 
 # First Seal

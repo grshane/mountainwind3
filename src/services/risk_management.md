@@ -1,5 +1,5 @@
 ---
-slug: "Risk Management"
+slug: "/Risk_Management"
 ---
 
 # Risk Management
