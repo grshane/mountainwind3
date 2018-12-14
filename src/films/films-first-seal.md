@@ -1,5 +1,6 @@
 ---
 title: First Seal
+slug: "/first-seal"
 description: >-
   Phasellus eleifend tincidunt lacus id ornare. Pellentesque eu sollicitudin
   dolor. Curabitur euismod iaculis sapien, et feugiat arcu fermentum vel. Sed ut
