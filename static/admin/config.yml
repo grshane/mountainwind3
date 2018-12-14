@@ -13,6 +13,7 @@ collections:
     create: true
     slug: "services/{{slug}}"
     fields:
+      - { label: 'Template Name', name: 'template', widget: 'hidden', default: 'service' }
       - { label: 'Service', name: 'title', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'markdown' }
   - name: "pages"
@@ -21,6 +22,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
+      - { label: 'Template Name', name: 'template', widget: 'hidden', default: 'page' }
       - { label: 'Page Title', name: 'title', widget: 'string' }
       - { label: 'Content', name: 'content', widget: 'markdown'}
   - name: "films"
@@ -29,7 +31,8 @@ collections:
     create: true
     slug: "films/{{slug}}"
     fields:
+      - { label: 'Template Name', name: 'template', widget: 'hidden', default: 'film' }
       - { label: 'Film Title', name: 'title', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'markdown'}
-      - { label: 'Poster Image', name: 'poster_img', widget: 'image'}
+      - { label: 'Poster Image', name: 'poster_img', widget: 'image', required: false}
 
