@@ -22,9 +22,9 @@ const Footer = () => {
   return (
     <FooterStyled>
       <Wrapper>
-        <FooterItem>Logo</FooterItem>
-        <FooterItem>Menu</FooterItem>
-        <FooterItem>Contact</FooterItem>
+        <FooterItem />
+        <FooterItem />
+        <FooterItem />
       </Wrapper>
     </FooterStyled>
   )

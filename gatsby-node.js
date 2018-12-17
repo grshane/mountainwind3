@@ -1,4 +1,25 @@
 const path = require('path')
+const { createFilePath } = require(`gatsby-source-filesystem`)
+
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
+  if (node.internal.type === `MarkdownRemark`) {
+    const slug = createFilePath({ node, getNode, basePath: `pages` })
+    if (node.frontmatter.template) {
+      createNodeField({
+        node,
+        name: `slug`,
+        value: `${node.frontmatter.template}${slug}`,
+      })
+    } else {
+      createNodeField({
+        node,
+        name: `slug`,
+        value: slug,
+      })
+    }
+  }
+}
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
@@ -10,6 +31,7 @@ exports.createPages = ({ graphql, actions }) => {
             node {
               frontmatter {
                 slug
+                template
               }
             }
           }
@@ -17,14 +39,34 @@ exports.createPages = ({ graphql, actions }) => {
       }
     `).then(results => {
       results.data.allMarkdownRemark.edges.forEach(({ node }) => {
-        createPage({
-          path: node.frontmatter.slug,
-          component: path.resolve('./src/components/postLayout.jsx'),
-          context: {
-            slug: node.frontmatter.slug,
-            template: node.frontmatter.template,
-          },
-        })
+        if (node.frontmatter.template === 'film') {
+          createPage({
+            path: `/film/${node.frontmatter.slug}`,
+            component: path.resolve('./src/components/filmLayout.jsx'),
+            context: {
+              slug: `/film/${node.frontmatter.slug}`,
+              template: node.frontmatter.template,
+            },
+          })
+        } else if (node.frontmatter.template === 'service') {
+          createPage({
+            path: `/service/${node.frontmatter.slug}`,
+            component: path.resolve('./src/components/serviceLayout.jsx'),
+            context: {
+              slug: `/service/${node.frontmatter.slug}`,
+              template: node.frontmatter.template,
+            },
+          })
+        } else {
+          createPage({
+            path: node.frontmatter.slug,
+            component: path.resolve('./src/components/postLayout.jsx'),
+            context: {
+              slug: node.frontmatter.slug,
+              template: node.frontmatter.template,
+            },
+          })
+        }
       })
       resolve()
     })

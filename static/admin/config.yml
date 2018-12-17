@@ -1,5 +1,5 @@
 backend:
-  name: git-gateway
+  name: github
   branch: master
   repo: grshane/mountainwind3
 
@@ -34,5 +34,5 @@ collections:
       - { label: 'Template Name', name: 'template', widget: 'hidden', default: 'film' }
       - { label: 'Film Title', name: 'title', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'markdown'}
-      - { label: 'Poster Image', name: 'poster_img', widget: 'image', required: false}
+      - { label: 'Poster Image', name: 'poster_img', widget: 'image', required: false }
 
