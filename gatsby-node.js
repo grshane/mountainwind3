@@ -1,4 +1,5 @@
 const path = require('path')
+
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
@@ -42,7 +43,7 @@ exports.createPages = ({ graphql, actions }) => {
         if (node.frontmatter.template === 'film') {
           createPage({
             path: `/film/${node.frontmatter.slug}`,
-            component: path.resolve('./src/components/filmLayout.jsx'),
+            component: path.resolve('./src/components/layout.jsx'),
             context: {
               slug: `/film/${node.frontmatter.slug}`,
               template: node.frontmatter.template,
@@ -51,7 +52,7 @@ exports.createPages = ({ graphql, actions }) => {
         } else if (node.frontmatter.template === 'service') {
           createPage({
             path: `/service/${node.frontmatter.slug}`,
-            component: path.resolve('./src/components/serviceLayout.jsx'),
+            component: path.resolve('./src/components/layout.jsx'),
             context: {
               slug: `/service/${node.frontmatter.slug}`,
               template: node.frontmatter.template,
