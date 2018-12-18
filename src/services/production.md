@@ -1,5 +1,5 @@
 ---
-slug: "production"
+slug: "/production"
 template: "service"
 title: "Production"
 ---

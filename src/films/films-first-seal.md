@@ -1,6 +1,6 @@
 ---
 title: First Seal
-slug: 'first-seal'
+slug: '/first-seal'
 template: 'film'
 poster_img: ''
 ---
