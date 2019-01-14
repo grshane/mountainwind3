@@ -3,10 +3,9 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
+import { GlobalStyle } from '../utils/globalStyle'
 import Header from './header'
 import Footer from './footer'
-
-import './layout.css'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -20,7 +19,8 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <div>
+      <>
+        <GlobalStyle/>
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
@@ -42,7 +42,7 @@ const Layout = ({ children }) => (
           {children}
         </div>
         <Footer />
-      </div>
+      </>
     )}
   />
 )

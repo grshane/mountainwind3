@@ -1,6 +1,6 @@
 ---
 slug: "risk-management"
-template: "/service"
+template: "service"
 title: "Risk Management and Choreography"
 ---
 - There’s more wisdom in prevention than curing.

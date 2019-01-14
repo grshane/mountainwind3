@@ -21,6 +21,7 @@ const MenuLink = styled.li`
 
 const Menu = styled.ul`
   list-style: none;
+  margin-bottom: 0;
 `
 
 const HeaderWrapper = styled.div`
@@ -34,11 +35,12 @@ const HeaderWrapper = styled.div`
   a {
     display: flex;
     align-items: center;
-  }
 
-  h1 {
-    color: #fff;
-    margin-left: 0.5em;
+    h1 {
+      color: #fff;
+      margin-left: 0.5em;
+      margin-bottom: 0;
+    }
   }
 `
 
@@ -53,7 +55,7 @@ const ListLink = props => (
 )
 
 const Header = ({ siteTitle }) => (
-  <div
+  <header
     style={{
       background: 'black',
       marginBottom: '1.45rem',
@@ -77,7 +79,7 @@ const Header = ({ siteTitle }) => (
         <ListLink to="/contact/">Contact</ListLink>
       </Menu>
     </HeaderWrapper>
-  </div>
+  </header>
 )
 
 export default Header

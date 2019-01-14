@@ -2,28 +2,29 @@ import React, { Component } from 'react'
 import { graphql } from 'gatsby'
 import Layout from './layout'
 
-export const query = graphql`
-  query getService($slug: String!) {
+const query = graphql`
+  query($slug: String!) {
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+      html
       frontmatter {
-        slug
         title
       }
-      html
     }
   }
 `
 
-class ServiceLayout extends Component {
-  render() {
-    const { markdownRemark } = this.props.data
-    return (
-      <Layout>
-        <h1>{markdownRemark.frontmatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
-      </Layout>
-    )
-  }
+export default ({ data }) => {
+  const { markdownRemark } = data
+  const { frontmatter, html } = markdownRemark
+  return (
+    <Layout>
+      {data}
+      <h1>{frontmatter.title}</h1>
+      <div
+        dangerouslySetInnerHTML={{
+          __html: html,
+        }}
+      />
+    </Layout>
+  )
 }
-
-export default ServiceLayout

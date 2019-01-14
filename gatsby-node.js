@@ -45,7 +45,7 @@ exports.createPages = ({ graphql, actions }) => {
             path: `/film/${node.frontmatter.slug}`,
             component: path.resolve('./src/components/layout.jsx'),
             context: {
-              slug: `/film/${node.frontmatter.slug}`,
+              slug: `/project/${node.frontmatter.slug}`,
               template: node.frontmatter.template,
             },
           })
