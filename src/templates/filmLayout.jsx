@@ -14,13 +14,14 @@ export const query = graphql`
 `
 
 export default ({data}) => {
-  const post = data.markdownRemark
+  const { markdownRemark } = data // data.markdownRemark holds our post data
+  const { html } = markdownRemark
   return (
     <Layout>
-      <h1>{post.frontmatter.title}</h1>
+      <h1>{markdownRemark.frontmatter.title}</h1>
       <div
         dangerouslySetInnerHTML={{
-          __html: post.html,
+          __html: data.markdownRemark.html,
         }}
       />
     </Layout>
