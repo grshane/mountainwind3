@@ -4,16 +4,17 @@ import Layout from '../components/layout'
 
 export const query = graphql`
   query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       html
       frontmatter {
         title
+        slug
       }
     }
   }
 `
 
-export default ({data}) => {
+export default ({ data }) => {
   const { markdownRemark } = data // data.markdownRemark holds our post data
   const { html } = markdownRemark
   return (
