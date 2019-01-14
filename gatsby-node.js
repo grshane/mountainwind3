@@ -6,11 +6,12 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === `MarkdownRemark`) {
     const slug = createFilePath({ node, getNode, basePath: `pages` })
+    console.log(slug)
     if (node.frontmatter.template) {
       createNodeField({
         node,
         name: `slug`,
-        value: `${node.frontmatter.template}${slug}`,
+        value: slug,
       })
     } else {
       createNodeField({
@@ -43,25 +44,25 @@ exports.createPages = ({ graphql, actions }) => {
         if (node.frontmatter.template === 'film') {
           createPage({
             path: `/film/${node.frontmatter.slug}`,
-            component: path.resolve('./src/components/layout.jsx'),
+            component: path.resolve('./src/templates/filmLayout.jsx'),
             context: {
-              slug: `/project/${node.frontmatter.slug}`,
+              slug: node.frontmatter.slug,
               template: node.frontmatter.template,
             },
           })
         } else if (node.frontmatter.template === 'service') {
           createPage({
             path: `/service/${node.frontmatter.slug}`,
-            component: path.resolve('./src/components/layout.jsx'),
+            component: path.resolve('./src/templates/serviceLayout.jsx'),
             context: {
-              slug: `/service/${node.frontmatter.slug}`,
+              slug: node.frontmatter.slug,
               template: node.frontmatter.template,
             },
           })
         } else {
           createPage({
-            path: node.frontmatter.slug,
-            component: path.resolve('./src/components/postLayout.jsx'),
+            path: `/${node.frontmatter.slug}`,
+            component: path.resolve('./src/templates/postLayout.jsx'),
             context: {
               slug: node.frontmatter.slug,
               template: node.frontmatter.template,

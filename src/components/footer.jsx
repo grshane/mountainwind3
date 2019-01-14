@@ -23,7 +23,9 @@ const Footer = () => {
     <FooterStyled>
       <Wrapper>
         <FooterItem />
-        <FooterItem />
+        <FooterItem>
+          <p>All Rights Reserved Mountain Wind Productions</p>
+        </FooterItem>
         <FooterItem />
       </Wrapper>
     </FooterStyled>
