@@ -6,7 +6,7 @@ import HeroVideo from '../components/hero'
 const IndexPage = () => (
   <Layout>
     <HeroVideo />
-    <h2>About Mountain Wind Productions</h2>
+    <h2>About Us</h2>
     <p>
       With a commitment to first-class service with integrity, Mountain Wind is
       a full-service production company specialized in content development,
