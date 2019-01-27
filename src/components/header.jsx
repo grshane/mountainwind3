@@ -40,6 +40,7 @@ const HeaderWrapper = styled.div`
       color: #fff;
       margin-left: 0.5em;
       margin-bottom: 0;
+      font-weight: normal;
     }
   }
 `
@@ -59,6 +60,8 @@ const Header = ({ siteTitle }) => (
     style={{
       background: 'black',
       marginBottom: '1.45rem',
+      position: 'sticky',
+      top: 0,
     }}
   >
     <HeaderWrapper>
@@ -75,7 +78,7 @@ const Header = ({ siteTitle }) => (
 
       <Menu>
         <ListLink to="/services">Services</ListLink>
-        <ListLink to="/films/">Films</ListLink>
+        {/*<ListLink to="/films/">Films</ListLink>*/}
         <ListLink to="/contact/">Contact</ListLink>
       </Menu>
     </HeaderWrapper>
