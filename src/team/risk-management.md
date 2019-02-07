@@ -61,6 +61,6 @@ description: >-
 
   * Working with untrained or inexperienced Crew
 
-  * and more…
+  * and more
 ---
 
