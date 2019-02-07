@@ -9,7 +9,7 @@ public_folder: /img
 collections:
   - name: "services"
     label: "Services"
-    folder: "src/team"
+    folder: "src/services"
     create: true
     slug: "services/{{slug}}"
     fields:

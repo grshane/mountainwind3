@@ -1,5 +1,7 @@
 ---
 title: Risk Management
+template: "service"
+---
 description: >-
   "Fortune favors the prepared mind." – Louis Pasteur
 
