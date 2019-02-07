@@ -18,7 +18,7 @@ description: >-
   are here to help you protect your team, your business, and yourself.
 
 
-  Services include:
+  **Services include:**
 
 
   * Proactive Strategy Development, Management, and Guidance
@@ -61,6 +61,6 @@ description: >-
 
   * Working with untrained or inexperienced Crew
 
-  * and more
+  * and more...
 ---
 
