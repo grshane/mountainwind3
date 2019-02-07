@@ -30,7 +30,7 @@ const HeaderWrapper = styled.div`
   align-items: center;
   margin: 0 auto;
   max-width: 75em;
-  padding: 1.45rem 1.0875rem;
+  padding: 0.4rem 1.0875rem 0;
 
   a {
     display: flex;
@@ -39,14 +39,16 @@ const HeaderWrapper = styled.div`
     h1 {
       color: #fff;
       margin-left: 0.5em;
-      margin-bottom: 0;
+      margin-bottom: 0.5rem;
       font-weight: normal;
+      font-size: 1.5rem;
     }
   }
 `
 
 const Logo = styled.img`
-  width: 100px;
+  width: 55px;
+  padding-top: 10px;
 `
 
 const ListLink = props => (
@@ -59,7 +61,6 @@ const Header = ({ siteTitle }) => (
   <header
     style={{
       background: 'black',
-      marginBottom: '1.45rem',
       position: 'sticky',
       top: 0,
     }}
