@@ -4,13 +4,17 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
 import ServiceList from '../components/serviceList'
 
-export const query = graphql`
-    query($slug: String!) {
-        markdownRemark(frontmatter: { slug: { eq: $slug } }) {
-            html
-        }
-    }
-`
+// export const query = graphql`
+//     query($slug: String!) {
+//         markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+//             html
+//             frontmatter {
+//                 title
+//                 slug
+//             }
+//         }
+//     }
+// `
 
 const IndexPage = () => (
   <Layout>
