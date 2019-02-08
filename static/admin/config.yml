@@ -7,32 +7,51 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "services"
-    label: "Services"
-    folder: "src/services"
+  - name: 'services'
+    label: 'Services'
+    folder: 'src/services'
     create: true
-    slug: "services/{{slug}}"
+    slug: 'services/{{slug}}'
     fields:
-      - { label: 'Template Name', name: 'template', widget: 'hidden', default: 'service' }
+      - {
+          label: 'Template Name',
+          name: 'template',
+          widget: 'hidden',
+          default: 'service',
+        }
       - { label: 'Service', name: 'title', widget: 'string' }
-      - { label: 'Description', name: 'description', widget: 'markdown' }
-  - name: "pages"
-    label: "Pages"
-    folder: "src/pages"
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'pages'
+    label: 'Pages'
+    folder: 'src/pages'
     create: true
-    slug: "{{slug}}"
+    slug: '{{slug}}'
     fields:
-      - { label: 'Template Name', name: 'template', widget: 'hidden', default: 'page' }
+      - {
+          label: 'Template Name',
+          name: 'template',
+          widget: 'hidden',
+          default: 'page',
+        }
       - { label: 'Page Title', name: 'title', widget: 'string' }
-      - { label: 'Content', name: 'content', widget: 'markdown'}
-  - name: "films"
-    label: "Films"
-    folder: "src/films"
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'films'
+    label: 'Films'
+    folder: 'src/films'
     create: true
-    slug: "films/{{slug}}"
+    slug: 'films/{{slug}}'
     fields:
-      - { label: 'Template Name', name: 'template', widget: 'hidden', default: 'film' }
+      - {
+          label: 'Template Name',
+          name: 'template',
+          widget: 'hidden',
+          default: 'film',
+        }
       - { label: 'Film Title', name: 'title', widget: 'string' }
-      - { label: 'Description', name: 'description', widget: 'markdown'}
-      - { label: 'Poster Image', name: 'poster_img', widget: 'image', required: false }
-
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {
+          label: 'Poster Image',
+          name: 'poster_img',
+          widget: 'image',
+          required: false,
+        }

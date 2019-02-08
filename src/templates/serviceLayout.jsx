@@ -22,7 +22,7 @@ export default ({ data }) => {
       <h1>{markdownRemark.frontmatter.title}</h1>
       <div
         dangerouslySetInnerHTML={{
-          __html: data.markdownRemark.html,
+          __html: html,
         }}
       />
     </Layout>

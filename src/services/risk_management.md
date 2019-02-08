@@ -1,7 +1,7 @@
 ---
 slug: "risk-management"
 template: "service"
-title: "Risk Management and Choreography"
+title: "Risk Management"
 ---
 "Fortune favors the prepared mind." – Louis Pasteur
 

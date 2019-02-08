@@ -63,6 +63,7 @@ const Header = ({ siteTitle }) => (
       background: 'black',
       position: 'sticky',
       top: 0,
+      zIndex: 5,
     }}
   >
     <HeaderWrapper>

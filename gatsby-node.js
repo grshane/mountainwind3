@@ -57,6 +57,8 @@ exports.createPages = ({ graphql, actions }) => {
             context: {
               slug: node.frontmatter.slug,
               template: node.frontmatter.template,
+              title: node.frontmatter.title,
+              html: node.html,
             },
           })
         } else {
